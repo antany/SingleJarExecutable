@@ -5,8 +5,12 @@ import org.junit.Test;
 public class ProjectTest {
 
 	@Test
-	public void test1_callMainMethod() {
+	public void test1_callMainMethod() throws Exception {
 		String[] args = {};
-		Project.main(args);
+		try {
+			Project.main(args);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
