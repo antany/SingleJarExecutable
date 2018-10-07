@@ -29,11 +29,6 @@ repositories {
 
 
 
-task copyLib(type: Copy){
-	into "build/libs/lib" from configurations.compile.collect {it}
-}
-
-
 
 jar {
     manifest {
@@ -55,7 +50,6 @@ jar {
     
 }
 
-jar.dependsOn(copyLib)
 
 sourceSets{
 	main{
